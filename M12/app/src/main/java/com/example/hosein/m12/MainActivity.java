@@ -16,43 +16,47 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
-    String s;
-    EditText editTextgetname;
+    String s, f, t1;
+    EditText editTextgetname, editTextgetfamil, editTextgettel;
     Button buttonadd;
     ListView lv;
-    ArrayList<String> list1;
+    ArrayList<Student> list1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Student student = new Student(s, f, t1);
         setContentView(R.layout.activity_main);
         editTextgetname = (EditText) findViewById(R.id.getname);
+        editTextgetfamil = (EditText) findViewById(R.id.getfamil);
+        editTextgettel = (EditText) findViewById(R.id.gettel);
         buttonadd = (Button) findViewById(R.id.btnadd);
         lv = (ListView) findViewById(R.id.listphon);
         list1 = new ArrayList<>();
         final myadbter myadbter1 = new myadbter(list1);
         buttonadd.setOnClickListener(new View.OnClickListener() {
 
-           @Override
-           public void onClick(View v) {
+            @Override
+            public void onClick(View v) {
                 s = editTextgetname.getText().toString();
+                f = editTextgetfamil.getText().toString();
+                t1 = editTextgettel.getText().toString();
+                list1.add(new Student(s,f,t1));
 
-               list1.add(s);
 
+                myadbter1.notifyDataSetChanged();
 
-               myadbter1.notifyDataSetChanged();
-
-           }
-       });
+            }
+        });
 
         lv.setAdapter(myadbter1);
 
     }
 
     public class myadbter extends BaseAdapter {
-        ArrayList<String> lista;
+        ArrayList<Student> lista;
 
-        public myadbter(ArrayList<String> listb) {
+        public myadbter(ArrayList<Student> listb) {
 
             lista = listb;
 
@@ -79,8 +83,12 @@ public class MainActivity extends AppCompatActivity {
 
             LayoutInflater inflater = getLayoutInflater();
             View v = inflater.inflate(R.layout.listraw, parent, false);
-            TextView textView111 = (TextView) v.findViewById(R.id.textlist);
-            textView111.setText(lista.get(position));
+            TextView textView1 = (TextView) v.findViewById(R.id.textlist);
+            TextView textView2 = (TextView) v.findViewById(R.id.textlist1);
+            TextView textView3 = (TextView) v.findViewById(R.id.textlist2);
+            textView1.setTag(convertView.getTag(1));
+
+
             return v;
         }
     }

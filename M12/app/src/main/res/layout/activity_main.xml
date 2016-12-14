@@ -13,6 +13,18 @@
         android:id="@+id/getname"
 
         />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/getfamil"
+
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/gettel"
+
+        />
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
