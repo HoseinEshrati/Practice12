@@ -21,11 +21,12 @@ public class MainActivity extends AppCompatActivity {
     Button buttonadd;
     ListView lv;
     ArrayList<Student> list1;
+    Student student;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Student student = new Student(s, f, t1);
+        student = new Student(s, f, t1);
         setContentView(R.layout.activity_main);
         editTextgetname = (EditText) findViewById(R.id.getname);
         editTextgetfamil = (EditText) findViewById(R.id.getfamil);
@@ -41,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
                 s = editTextgetname.getText().toString();
                 f = editTextgetfamil.getText().toString();
                 t1 = editTextgettel.getText().toString();
-                list1.add(new Student(s,f,t1));
+                list1.add(new Student(s, f, t1));
 
 
                 myadbter1.notifyDataSetChanged();
@@ -82,13 +83,16 @@ public class MainActivity extends AppCompatActivity {
         public View getView(int position, View convertView, ViewGroup parent) {
 
             LayoutInflater inflater = getLayoutInflater();
+
             View v = inflater.inflate(R.layout.listraw, parent, false);
             TextView textView1 = (TextView) v.findViewById(R.id.textlist);
             TextView textView2 = (TextView) v.findViewById(R.id.textlist1);
             TextView textView3 = (TextView) v.findViewById(R.id.textlist2);
-            textView1.setTag(convertView.getTag(1));
 
 
+            textView1.setText(student.name);
+            textView2.setText(student.family);
+            textView3.setText(student.telnumber);
             return v;
         }
     }
