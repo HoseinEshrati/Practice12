@@ -6,12 +6,14 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     ListView lv;
     ArrayList<Student> list1;
     Student student;
-
+    myadbter myadbter1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         buttonadd = (Button) findViewById(R.id.btnadd);
         lv = (ListView) findViewById(R.id.listphon);
         list1 = new ArrayList<>();
-        final myadbter myadbter1 = new myadbter(list1);
+    myadbter1= new myadbter(list1);
         buttonadd.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -52,14 +54,25 @@ public class MainActivity extends AppCompatActivity {
 
         lv.setAdapter(myadbter1);
 
+lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+
+
+    }
+});
     }
 
     public class myadbter extends BaseAdapter {
         ArrayList<Student> lista;
 
+
+
         public myadbter(ArrayList<Student> listb) {
 
             lista = listb;
+
 
 
         }
@@ -89,10 +102,11 @@ public class MainActivity extends AppCompatActivity {
             TextView textView2 = (TextView) v.findViewById(R.id.textlist1);
             TextView textView3 = (TextView) v.findViewById(R.id.textlist2);
 
+textView1.setText(lista.get(position).name);
+            textView2.setText(lista.get(position).family);
+            textView3.setText(lista.get(position).telnumber);
 
-            textView1.setText(student.name);
-            textView2.setText(student.family);
-            textView3.setText(student.telnumber);
+
             return v;
         }
     }
