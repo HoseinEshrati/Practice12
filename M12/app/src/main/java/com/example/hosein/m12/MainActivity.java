@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
@@ -53,15 +54,27 @@ public class MainActivity extends AppCompatActivity {
         });
 
         lv.setAdapter(myadbter1);
+        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-    @Override
-    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Toast.makeText(MainActivity.this,list1.get(position).name,Toast.LENGTH_SHORT).show();
+
+                
+            }
+        });
 
 
+        lv.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
 
-    }
-});
+
+                return true;
+            }
+        });
+
+
     }
 
     public class myadbter extends BaseAdapter {
@@ -75,7 +88,10 @@ lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
 
 
+
+
         }
+
 
         @Override
         public int getCount() {
@@ -92,8 +108,13 @@ lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             return position;
         }
 
+
+
+
+
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
+
 
             LayoutInflater inflater = getLayoutInflater();
 
@@ -109,5 +130,10 @@ textView1.setText(lista.get(position).name);
 
             return v;
         }
+
+
+
     }
+
+
 }
