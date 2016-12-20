@@ -1,0 +1,7 @@
+#Tue Dec 20 15:14:28 IRST 2016
+base.0=D\:\\JavaPorject\\1p\\12\\M12\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_5b1d4d71e0341dfe914e57987535694eb03574f7
+renamed.1=classes2.dex
+renamed.0=classes.dex
+file.1=D\:\\JavaPorject\\1p\\12\\M12\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_3270e9b614b2ac2c76962cc036ddaa4d8db7a619\\classes.dex
+base.1=D\:\\JavaPorject\\1p\\12\\M12\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_3270e9b614b2ac2c76962cc036ddaa4d8db7a619
+file.0=D\:\\JavaPorject\\1p\\12\\M12\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_5b1d4d71e0341dfe914e57987535694eb03574f7\\classes.dex

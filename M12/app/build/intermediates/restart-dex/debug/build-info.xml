@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<instant-run
+    abi="x86"
+    api-level="23"
+    density="xhdpi"
+    format="8"
+    plugin-version="2.2.2"
+    timestamp="117008105701132"
+    token="-7008310492435594897"
+    verifier="COMPATIBLE" >
+
+    <task
+        name="javac"
+        duration="156" />
+    <task
+        name="instant-run-dex"
+        duration="27" />
+    <task
+        name="instant-run-transform"
+        duration="48" />
+    <task
+        name="verifier"
+        duration="8" />
+
+    <artifact
+        location="D:\JavaPorject\1p\12\M12\app\build\intermediates\reload-dex\debug\classes.dex"
+        type="RELOAD_DEX" />
+
+    <build
+        timestamp="115551548255948"
+        verifier="FULL_BUILD_REQUESTED" >
+        <artifact
+            location="D:\JavaPorject\1p\12\M12\app\build\outputs\apk\app-debug.apk"
+            type="MAIN" />
+    </build>
+    <build
+        timestamp="116804419341557"
+        verifier="CLASS_ADDED" >
+        <artifact
+            location="D:\JavaPorject\1p\12\M12\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_1\classes.dex"
+            type="DEX" />
+    </build>
+    <build
+        timestamp="116858764367784"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="D:\JavaPorject\1p\12\M12\app\build\intermediates\builds\debug\116858764367784\classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        timestamp="116892918074870"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="D:\JavaPorject\1p\12\M12\app\build\intermediates\builds\debug\116892918074870\classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        timestamp="116942099109492"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="D:\JavaPorject\1p\12\M12\app\build\intermediates\builds\debug\116942099109492\classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        timestamp="116965918151701"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="D:\JavaPorject\1p\12\M12\app\build\intermediates\builds\debug\116965918151701\classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        timestamp="117008105701132"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="D:\JavaPorject\1p\12\M12\app\build\intermediates\reload-dex\debug\classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+
+</instant-run>
